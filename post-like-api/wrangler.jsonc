@@ -1,0 +1,21 @@
+/**
+ * For more details on how to configure Wrangler, refer to:
+ * https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "post-like-api",
+	"main": "src/index.ts",
+	"compatibility_date": "2026-08-20",
+	"observability": {
+		"enabled": true
+	},
+	"upload_source_maps": true,
+	"kv_namespaces": [
+		{
+			"binding": "LIKE_DB",
+			"id": "9c4c88b742974feebc1a7ed6cfb1fb86",
+			"remote": true
+		}
+	]
+}

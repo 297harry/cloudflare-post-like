@@ -36,7 +36,7 @@ export default {
 		}
 
 		const url = new URL(request.url);
-		const match = url.pathname.match(/^\/posts\/([^/]+)\/(likes|like|unlike)$/);
+		const match = url.pathname.match(/^\/api\/posts\/([^/]+)\/(likes|like|unlike)$/);
 		if (!match) return json(env, { error: "Not found" }, 404);
 
 		const [, rawPostId, action] = match;
